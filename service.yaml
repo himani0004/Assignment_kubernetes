@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: himani-service
+  namespace: himani-app
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+      nodePort: 30100
+  type: NodePort  
+  
